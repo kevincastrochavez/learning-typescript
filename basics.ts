@@ -11,11 +11,14 @@ isStudent = true;
 let hobbies: string[];
 hobbies = ['Sports', 'Cooking'];
 
-// Define the type of an object
-let person: {
+// Type aliases (using same structure for different instances)
+type Person = {
   name: string;
   age: number;
 };
+
+// Define the type of an object
+let person: Person;
 
 person = {
   name: 'Kevin',
@@ -23,10 +26,7 @@ person = {
 };
 
 // Array of objects
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[];
 
 // Type inference (best practice)
 let course = 'React';
