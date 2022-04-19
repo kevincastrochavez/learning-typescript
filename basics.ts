@@ -82,3 +82,29 @@ class Student {
 
 const student = new Student('Kevin', 'Castro', 25, ['React']);
 student.enroll('Angular');
+
+// INTERFACES
+// Useful to define object types and force to set up certain structure for classes
+interface Human {
+  firstName: string;
+  age: number;
+  greet: () => void;
+}
+
+let kevin: Human;
+
+kevin = {
+  firstName: 'Kevin',
+  age: 25,
+  greet() {
+    console.log('Hi');
+  },
+};
+
+class Instructor implements Human {
+  firstName: string;
+  age: number;
+  greet() {
+    console.log('Hi');
+  }
+}
