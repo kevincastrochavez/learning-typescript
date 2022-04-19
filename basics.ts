@@ -56,3 +56,29 @@ function insertAtBeginning<T>(array: T[], value: T) {
 
 const demoArray = [1, 2, 3];
 const updatedArray = insertAtBeginning(demoArray, -1);
+
+// Classes and Interfaces
+class Student {
+  // firstName: string;
+  // lastName: string;
+  // age: number;
+  // private courses: string[];
+
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public age: number,
+    private courses: string[]
+  ) {}
+
+  enroll(courseName: string) {
+    this.courses.push(courseName);
+  }
+
+  listCourses() {
+    return this.courses.slice();
+  }
+}
+
+const student = new Student('Kevin', 'Castro', 25, ['React']);
+student.enroll('Angular');
