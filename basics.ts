@@ -27,3 +27,7 @@ let people: {
   name: string;
   age: number;
 }[];
+
+// Type inference (best practice)
+let course = 'React';
+// course = 12341; It won't reassing
