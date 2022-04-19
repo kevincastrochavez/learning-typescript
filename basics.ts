@@ -35,3 +35,24 @@ let course = 'React';
 // Union types (allows yo to include more than one type)
 let random: string | number = 'Hello';
 random = 12341;
+
+// Functions and types
+// function add(a: number, b: number): number | string {
+function add(a: number, b: number) {
+  return a + b;
+}
+
+function print(value: any) {
+  console.log(value);
+}
+
+// Generics (helps you write functions type safe yet flexible)
+// Typescript looks at the type of the parameters
+
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+const demoArray = [1, 2, 3];
+const updatedArray = insertAtBeginning(demoArray, -1);
