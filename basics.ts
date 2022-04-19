@@ -31,3 +31,7 @@ let people: {
 // Type inference (best practice)
 let course = 'React';
 // course = 12341; It won't reassing
+
+// Union types (allows yo to include more than one type)
+let random: string | number = 'Hello';
+random = 12341;
